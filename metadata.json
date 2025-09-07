@@ -1,0 +1,5 @@
+{
+  "name": "Farmhand AI",
+  "description": "An AI-powered assistant for farmers worldwide. Upload a photo of your crop or soil, ask a question, and get expert advice on irrigation, crop diseases, and farming techniques using advanced image analysis.",
+  "requestFramePermissions": []
+}
