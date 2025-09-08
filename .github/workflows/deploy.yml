@@ -1,35 +1,36 @@
-name: Deploy Vite app to GitHub Pages
+name: Deploy Vite + Vue to GitHub Pages
  
 on:
   push:
     branches:
-      - main   # or master, depending on your repo
- 
-permissions:
-  contents: write   # needed for deployment
+      - main  # or master if your repo uses master
  
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
  
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # 1. Checkout repo
+      - name: Checkout
+        uses: actions/checkout@v3
  
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      # 2. Setup Node.js
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: npm
  
-      - name: Install dependencies
+      # 3. Install dependencies
+      - name: Install
         run: npm install
  
-      - name: Build Vite app
+      # 4. Build project
+      - name: Build
         run: npm run build
  
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      # 5. Deploy to GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
