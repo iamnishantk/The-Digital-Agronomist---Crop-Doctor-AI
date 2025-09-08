@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage":"https://iamnishantk.github.io/The-Digital-Agronomist---Crop-Doctor-AI",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -18,10 +17,5 @@
     "@types/node": "^22.14.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
-  },
-"devDependencies": {
-  "@vitejs/plugin-vue": "^5.0.4",  // example version
-  "vite": "^5.2.0",                 // make sure vite is also there
-  "typescript": "^5.3.0"           // if using vite.config.ts
-}
+  }
 }
